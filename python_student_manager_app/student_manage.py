@@ -18,16 +18,10 @@ def add_student(name, id):
     students.append(student)
 
 
-def var_args(name, *args):
-    print(args)
+student_name = input('Enter student name: ')
+student_id = input('Enter student id: ')
 
-
-def var_kwargs(name, **kwargs):
-    print(kwargs)
-
-
-add_student(name='ivan', id=33)
-print_students_titlecase()
-
-var_args('somename', 1, 2, 3, True)
-var_kwargs('somename', description="Learning Python", cool=True)
+# print(student_name)
+# print(student_id)
+# add_student(student_name, student_id)
+# print_students_titlecase()

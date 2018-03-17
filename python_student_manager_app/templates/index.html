@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Python Students Manaager</h1>
+
+        <div class="list-students">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{student["id"]}}</td>
+                        <td>{{student["name"]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="add-student">
+                <form action="/" method="POST">
+                    <div class="bd-example" data-example-id="">
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label">Student id</label>
+                            <div class="col-10">
+                                <input class="form-control" name="student_id" type="text" id="example-text-input">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-search-input" class="col-2 col-form-label">Student name</label>
+                            <div class="col-10">
+                                <input class="form-control" name="student_name" type="search" id="example-search-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn btn-primary" value="Add">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
